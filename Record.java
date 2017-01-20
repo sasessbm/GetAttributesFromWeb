@@ -15,7 +15,7 @@ public class Record {
 	private String blogArticle;
 	
 	//コンストラクタ
-	public Record(int id, String snippet, String medicineName,
+	public Record(String snippet, String medicineName,
 			String diseaseName, String sex, String title_blog,
 			String title_blogArticle, String url_blogArticle, String age,
 			String blogArticle) {

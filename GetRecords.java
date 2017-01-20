@@ -2,25 +2,28 @@ package getAttributesFromWeb;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-public class GetAttributes {
+public class GetRecords {
 
-	public static Record GetAttributes(String url) throws IOException {
+	public static ArrayList<Record> GetRecordList(String url) throws IOException {
 		
-		String snippet;
-		String medicineName;
-		String diseaseName;
-		String sex;
-		String title_blog;
-		String title_blogArticle;
-		String url_blogArticle;
-		String age;
-		String blogArticle;
+		ArrayList<Record> recordList = new ArrayList<Record>();
+		
+		String snippet = "";
+		String medicineName = "";
+		String diseaseName = "";
+		String sex = "";
+		String title_blog = "";
+		String title_blogArticle = "";
+		String url_blogArticle = "";
+		String age = "";
+		String blogArticle = "";
 		
 		System.setProperty("http.proxyHost", "proxy.nagaokaut.ac.jp");
         System.setProperty("http.proxyPort", "8080");
@@ -72,11 +75,14 @@ public class GetAttributes {
 					System.out.println("スニペット:" + ddTag.text());
 				}
 				
+				Record record = new Record(snippet,medicineName,diseaseName,sex,title_blog,title_blogArticle,url_blogArticle,age,blogArticle);
+				recordList.add(record);
 			}
 			
 			System.out.println("-----------------------------------------------------------------------------------------------------------------------");
 		}
 		
+		return recordList;
 
 	}
 	

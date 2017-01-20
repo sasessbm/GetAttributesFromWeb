@@ -2,7 +2,7 @@ package getAttributesFromWeb;
 
 import java.io.IOException;
 
-public class SetAttributesToDB {
+public class SetRecordsToDB {
 	
 	public static void main(String[] args) throws IOException {
 		
