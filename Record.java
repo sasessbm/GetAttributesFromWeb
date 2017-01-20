@@ -47,6 +47,10 @@ public class Record {
 	public String getMedicineName() {
 		return medicineName;
 	}
+	
+	public void setMedicineName(String medicineName) {
+		this.medicineName = medicineName;
+	}
 
 	public String getDiseaseName() {
 		return diseaseName;
