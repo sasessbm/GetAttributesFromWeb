@@ -1,6 +1,7 @@
 package getAttributesFromWeb;
 
 import java.io.IOException;
+import java.net.URL;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -9,7 +10,7 @@ import org.jsoup.select.Elements;
 
 public class GetAttributes {
 
-	public static void main(String[] args) throws IOException {
+	public static void main() throws IOException {
 		System.setProperty("http.proxyHost", "proxy.nagaokaut.ac.jp");
         System.setProperty("http.proxyPort", "8080");
 		
