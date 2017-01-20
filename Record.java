@@ -31,5 +31,49 @@ public class Record {
 		this.age = age;
 		this.blogArticle = blogArticle;
 	}
+
+	public static int getIdCount() {
+		return idCount;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public String getSnippet() {
+		return snippet;
+	}
+
+	public String getMedicineName() {
+		return medicineName;
+	}
+
+	public String getDiseaseName() {
+		return diseaseName;
+	}
+
+	public String getSex() {
+		return sex;
+	}
+
+	public String getTitle_blog() {
+		return title_blog;
+	}
+
+	public String getTitle_blogArticle() {
+		return title_blogArticle;
+	}
+
+	public String getUrl_blogArticle() {
+		return url_blogArticle;
+	}
+
+	public String getAge() {
+		return age;
+	}
+
+	public String getBlogArticle() {
+		return blogArticle;
+	}
 	
 }
