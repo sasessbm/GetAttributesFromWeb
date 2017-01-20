@@ -28,8 +28,8 @@ public class GetMedicineNameAndUrl {
         	Elements aTags = wordTag.select("dd a");
         	for (Element aTag : aTags){
         		name_medicine = aTag.text();
-        		url_medicine = aTag.html();
-        		medicineNameAndUrlHashMap.put(name_medicine,  aTag.attr("href"));
+        		url_medicine = aTag.attr("href");
+        		medicineNameAndUrlHashMap.put(name_medicine,  "http://www.tobyo.jp/reference/" + url_medicine);
         	}
         }
         
