@@ -29,7 +29,7 @@ public class GetMedicineNameAndUrl {
         	for (Element aTag : aTags){
         		name_medicine = aTag.text();
         		url_medicine = aTag.html();
-        		medicineNameAndUrlHashMap.put(name_medicine, "test");
+        		medicineNameAndUrlHashMap.put(name_medicine,  aTag.attr("href"));
         	}
         }
         
