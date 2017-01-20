@@ -20,7 +20,7 @@ public class Record {
 			String title_blogArticle, String url_blogArticle, String age,
 			String blogArticle) {
 		idCount ++;
-		this.id = id;
+		this.id = idCount;
 		this.snippet = snippet;
 		this.medicineName = medicineName;
 		this.diseaseName = diseaseName;

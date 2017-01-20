@@ -39,20 +39,25 @@ public class GetRecords {
 				if(ddTag.className().equals("site-title-icon")){
 					Elements aTagsInDDTag = ddTag.select("a");
 					for (Element aTag:aTagsInDDTag){
-						
 						if(aTag.className().equals("site-title")){
+							//ブログタイトル
 							title_blog = aTag.text();
 						}
 						else if(aTag.className().equals("inp-link")){
+							//病名
 							diseaseName = aTag.text();
 						}
 						else if(aTag.className().equals("")){
 							String href = aTag.select("[href]").text();
 							if(href.length() == 2){
+								//性別
 								sex = href;
+								//年齢
 								age = "不明";
 							}else{
+								//性別
 								sex = href;
+								//年齢
 								age = getAge(href);
 							}
 						}
@@ -63,12 +68,10 @@ public class GetRecords {
 				}else{
 					snippet = ddTag.text();
 				}
-				
-				Record record = new Record(snippet,medicineName,diseaseName,sex,title_blog,title_blogArticle,url_blogArticle,age,blogArticle);
-				recordList.add(record);
 			}
 			
-			System.out.println("-----------------------------------------------------------------------------------------------------------------------");
+			Record record = new Record(snippet,medicineName,diseaseName,sex,title_blog,title_blogArticle,url_blogArticle,age,blogArticle);
+			recordList.add(record);
 		}
 		
 		return recordList;
