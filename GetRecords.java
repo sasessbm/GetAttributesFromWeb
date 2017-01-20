@@ -49,7 +49,13 @@ public class GetRecords {
 						}
 						else if(aTag.className().equals("")){
 							String href = aTag.select("[href]").text();
-							if(href.length() == 2){
+							if(href.length() == 0){
+								//性別
+								sex = "不明";
+								//年齢
+								age = "不明";
+							}
+							else if(href.length() == 2){
 								//性別
 								sex = href;
 								//年齢

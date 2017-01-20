@@ -31,6 +31,14 @@ public class Record {
 		this.age = age;
 		this.blogArticle = blogArticle;
 	}
+	
+	//ブログ記事無し
+	public Record(String snippet, String medicineName,
+			String diseaseName, String sex, String title_blog,
+			String title_blogArticle, String url_blogArticle, String age
+			) {
+		this(snippet, medicineName, diseaseName, sex, title_blog, title_blogArticle, url_blogArticle, age, "");
+	}
 
 	public static int getIdCount() {
 		return idCount;
