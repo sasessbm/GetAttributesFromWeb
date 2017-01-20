@@ -1,7 +1,5 @@
 package getAttributesFromWeb;
 
-import java.net.URL;
-
 public class Record {
 	
 	private static int idCount = 0;
