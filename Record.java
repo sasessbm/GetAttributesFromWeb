@@ -8,40 +8,28 @@ public class Record {
 	private String medicineName;
 	private String diseaseName;
 	private String sex;
-	private String blogTitle;
-	private String blogArticleTitle;
-	private String url;
-	private int age;
+	private String title_blog;
+	private String title_blogArticle;
+	private String url_blogArticle;
+	private String age;
 	private String blogArticle;
 	
-	//コンストラクタ(ALL)
-	public Record(String snippet, String medicineName, String diseaseName,
-			String sex, String blogTitle, String blogArticleTitle, String url,
-			int age, String blogArticle) {
+	//コンストラクタ
+	public Record(int id, String snippet, String medicineName,
+			String diseaseName, String sex, String title_blog,
+			String title_blogArticle, String url_blogArticle, String age,
+			String blogArticle) {
 		idCount ++;
-		id = idCount;
+		this.id = id;
 		this.snippet = snippet;
 		this.medicineName = medicineName;
 		this.diseaseName = diseaseName;
 		this.sex = sex;
-		this.blogTitle = blogTitle;
-		this.blogArticleTitle = blogArticleTitle;
-		this.url = url;
+		this.title_blog = title_blog;
+		this.title_blogArticle = title_blogArticle;
+		this.url_blogArticle = url_blogArticle;
 		this.age = age;
 		this.blogArticle = blogArticle;
 	}
-
-	//コンストラクタ(ブログ記事無し)
-	public Record(String snippet, String medicineName, String diseaseName,
-			String sex, String blogTitle, String blogArticleTitle, String url,
-			int age) {
-		this(snippet, medicineName, diseaseName, sex, blogTitle, blogArticleTitle, url, age, null);
-	}
-
-	//コンストラクタ(ブログ記事と年齢無し)
-	public Record(String snippet, String medicineName, String diseaseName,
-			String sex, String blogTitle, String blogArticleTitle, String url) {
-		this(snippet, medicineName, diseaseName, sex, blogTitle, blogArticleTitle, url, -1);
-	}
-
+	
 }
